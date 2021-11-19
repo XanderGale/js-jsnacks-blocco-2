@@ -1,14 +1,20 @@
 const nomi = ['Alberto', 'Luigi', 'Luca'];
 const cognomi = ['De Luca', 'Escobar', 'Ratti'];
+const listaInvitati = parseInt(prompt('Inserisci Numero Invitati'));
 
-const randomCognome = Math.floor(Math.random() * cognomi.length);
-const randomNome = Math.floor(Math.random() * nomi.length);
+
 
 // console.log(nomi[randomNome]);
 
 // console.log(cognomi[randomCognome]);
 
+for ( i = 0; i < listaInvitati; i++ ){
+    let randomCognome = Math.floor(Math.random() * (cognomi.length - 1 + 1));
+    let randomNome = Math.floor(Math.random() * (nomi.length - 1 + 1) );
+    let outputString = `${nomi[randomNome]} ${cognomi[randomCognome]}`;
+    alert(outputString);
+}
 
-let outputString = `${nomi[randomNome]} ${cognomi[randomCognome]}`;
 
-alert(outputString);
+
+
