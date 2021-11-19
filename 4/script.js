@@ -14,8 +14,13 @@ do {
     somma = somma + inputNumber;
 } while ( somma < 50 )
 
-alert(`
-La somma dei numeri da te inseriti è: ${somma}.
+if(!isNaN(somma)){
+    alert(`
+    La somma dei numeri da te inseriti è: ${somma}.
 
-I numeri da te inseriti sono stati: ${inputNumbers}.
-`);
+    I numeri da te inseriti sono stati: ${inputNumbers}.
+    `);
+} else {
+    alert('Hai inserito un numero non valido');
+};
+
